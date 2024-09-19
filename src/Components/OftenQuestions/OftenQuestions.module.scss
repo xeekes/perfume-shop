@@ -1,0 +1,93 @@
+@import '../../variables.scss';
+
+
+
+.OQcontainer{
+ 
+
+    display: flex;
+    flex-direction: column;
+    
+    @include AV("margin-bottom", 130,70);
+    align-items: center;
+    text-align: center;
+    width: 100%;
+   
+
+}
+.OQcontainer h2 {
+  color:  #791616;
+margin-top: 10%;
+}
+.OQcontainer p {
+    color: #791616;
+    font-style: italic;
+    @include fsz20
+}
+
+.OQcontainer i {
+      color: #791616;
+      font-size: 30px; // Задайте размер иконок
+      margin: 0 10px; // Пример отступов между иконками
+      // transition: color 0.3s ease; // Плавный переход цвета при наведении
+    }
+    .OQcontainerImgQuest{
+      display: grid;
+      width: 100%;
+      grid-template-columns: 60fr 40fr;
+      gap: 15px;
+      @media (max-width:1000px) {
+        grid-template-columns: 1fr;
+      }
+    }
+    .OQcontainerQuestions{
+      display: flex;
+      flex-direction: column;
+      @media (max-width:1000px) {
+        width: 100%;
+        *{
+          width: 100%;
+        }
+      }
+    }
+    .OQcontainerQuestions div{
+      display: flex;
+      height: 110px;
+      border-top: 1.5px solid  #791616;
+      &:last-child{
+        border-bottom: 1.5px solid  #791616;
+      }
+    }
+    .OQcontainerQuestions{
+      // border-bottom: 1.5px solid  #791616;
+    }
+    
+    .OQcontainer button{
+      color: #791616;
+      @include fsz20;
+    }
+    .OQcontainerImgQuest img{
+      object-fit: cover;
+      max-height: 550px;
+      width: 100%;
+      
+   }
+   @media (max-width: 425px){
+    .OQcontainerImgQuest{
+  
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  
+    }
+    .OQcontainerQuestions{
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .OQcontainerImgQuest img{
+     }
+     .OQcontainer{
+     }
+   }

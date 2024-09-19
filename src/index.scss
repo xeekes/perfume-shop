@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+@import 'variables.scss';
+*{
+  font-family: 'Mulish';
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  transition: .2s;
+}
+
+a, button{
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+}
+
+
+.default-button{
+  border: 1px solid $red;
+  padding: 15px 60px;
+  color: #FFFFFF;
+  border-radius: 3px;
+  background: $red;
+  &:hover{
+    color: $red;
+    background: #FFFFFF;
+  }
+}
+
+
+
+.default-button-white{
+  color: $red;
+  font-weight: 900;
+  @include fsz24;
+  background: #FFFFFF;
+  padding: 15px 60px;
+  border-radius: 1px;
+  border: 1px solid $red;
+  &:hover{
+    padding: 15px 60px;
+    color: #FFFFFF;
+    background: $red;
+  }
+}
+
+
+.default-button-black{
+  text-align: center;
+  border: 1px solid #000000;
+  padding: 15px 60px;
+  color: #FFFFFF;
+  border-radius: 3px;
+  max-width: 368px;
+  background: #000000;
+  &:hover{
+    color: #000000;
+    background: #FFFFFF;
+  }
+}
+
+
+
+
+
+.dflt-input{
+    padding: 11px 25px;
+    border: 1.5px solid $red;
+    @include fsz16;
+
+
+    &::placeholder {
+        @include fsz16;
+        font-weight: 300;
+        color: $red;
+    }
+}
+
+
+header, main, footer, .wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.wrapper{
+  min-height: 100vh;
+  main {
+    flex: 1 1 auto;
+    .container{
+    }
+  }
+}
+
+
+.container{
+  max-width: 1517px;
+  padding: 0 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
